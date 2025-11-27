@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio JDR</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <canvas id="starfield"></canvas>
+
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">🚀 Jorge Diez Rodriguez</div>
+
+
+      <div class="menu-toggle">&#9776;</div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero ">
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="typing">
+          Hola, soy
+          <span class="destacado">Desarrollador Web Full Stack</span>
+        </h1>
+        <p>
+          Soy un desarrollador Full Stack apasionado por la creación de
+          soluciones digitales integrales, con experiencia en el diseño,
+          desarrollo y despliegue de aplicaciones web modernas y funcionales.
+          Además complemento mi formación con un curso de ciberseguridad de Cisco Networking Academy.Y también un Master
+          de Inteligencia Artificial en Big School impartido por Jon Hernández y reconocido por la Universidad Isabel I.
+        </p>
+        <a href="#proyectos" class="btn">Ver Proyectos</a>
+        <button onclick="descargarPDF()">Descargar CV</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades" class="habilidades reveal">
+    <h2>Habilidades</h2>
+
+    <div class="categoria">
+      <h3>Frontend</h3>
+      <div class="grid">
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
+            width="50" />
+          <p>HTML5</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" width="50" />
+          <p>CSS3</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            alt="JavaScript" width="50" />
+          <p>JavaScript</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
+            width="50" />
+          <p>React</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular"
+            width="50" />
+          <p>Angular</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg" alt="Astro"
+            width="50" />
+          <p>Astro</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"
+            width="50" />
+          <p>Bootstrap</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass/SCSS"
+            width="50" />
+          <p>SCSS</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js"
+            width="50" />
+          <p>Next.js</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+            alt="TypeScript" width="50" />
+          <p>TypeScript</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js"
+            width="50" />
+          <p>Vue.js</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="categoria">
+      <h3>Backend</h3>
+      <div class="grid">
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
+            width="50" />
+          <p>Node.js</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+            width="50" />
+          <p>Python</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="50" />
+          <p>Java</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" width="50" />
+          <p>PHP</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"
+            width="50" />
+          <p>Docker</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#"
+            width="50" />
+          <p>C#</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="categoria">
+      <h3>Base de Datos</h3>
+      <div class="grid">
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"
+            width="50" />
+          <p>MongoDB</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
+            width="50" />
+          <p>MySQL</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg" alt="MariaDB"
+            width="50" />
+          <p>MariaDB</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite"
+            width="50" />
+          <p>SQLite</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+            alt="PostgreSQL" width="50" />
+          <p>PostgreSQL</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase"
+            width="50" />
+          <p>Firebase</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle"
+            width="50" />
+          <p>Oracle</p>
+        </div>
+      </div>
+    </div>
+    <div class="categoria">
+      <h3>Herramientas y Control de Versiones</h3>
+      <div class="grid">
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="50" />
+          <p>Git</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+            width="50" />
+          <p>GitHub</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab"
+            width="50" />
+          <p>GitLab</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman"
+            width="50" />
+          <p>Postman</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" alt="Trello"
+            width="50" />
+          <p>Trello</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="categoria">
+      <h3>Otras Formaciones</h3>
+      <div class="categoria">
+
+        <div class="categoria">
+
+          <div class="grid">
+
+            <div class="card">
+              <img src="https://cdn-icons-png.flaticon.com/512/2889/2889676.png" alt="Ciberseguridad" width="50" />
+              <p>Curso de Ciberseguridad</p>
+              <span class="subtexto"> <strong>Cisco Networking Academy</strong></span>
+            </div>
+
+            <div class="card">
+              <img src="https://cdn-icons-png.flaticon.com/512/4712/4712107.png" alt="Inteligencia Artificial"
+                width="50" />
+              <p>Máster en Inteligencia Artificial</p>
+              <span class="subtexto"> <strong>Big School</strong></span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiencia" class="experiencia reveal">
+    <h2>Experiencia</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-icon">💼</div>
+        <div class="timeline-content">
+          <h3>Desarrollador Web Junior - Integrasys S.A</h3>
+          <span class="fecha">Septiembre 2023 - Diciembre 2024</span>
+          <p id="mensaje-importante">
+            Participé en el desarrollo completo de aplicaciones web,
+            trabajando tanto en el frontend como en el backend. En el
+            frontend, utilicé tecnologías como HTML5, CSS3, JavaScript y
+            frameworks como React, enfocándome en crear interfaces
+            responsivas, accesibles y con una experiencia de usuario fluida.
+            En el backend, implementé lógica de negocio, autenticación de
+            usuarios y conexiones con bases de datos utilizando Node.js,
+            Express y MySQL. Desarrollé APIs REST para facilitar la
+            comunicación entre el cliente y el servidor.Utilicé Git para el
+            control de versiones
+          </p>
+        </div>
+      </div>
+    </div>
+
+    
+  </section>
+
+  <section id="proyectos" class="proyectos reveal">
+    <h2>Proyectos Destacados</h2>
+    <div class="grid">
+      <div class="card-mm-container">
+        <div class="card-mm">
+          <div class="card-mm-front">
+            <img src="https://i.ibb.co/dHdFgbf/Mastermind.png" alt="MasterMind" />
+            </a>
+            <h3>MasterMind</h3>
+            <p>
+              MasterMind es un juego web donde el objetivo es adivinar un patrón
+              secreto de colores. Tienes 5 intentos para acertarlo y los colores
+              pueden repetirse en la combinación.
+            </p>
+          </div>
+          <div class="card-mm-back">
+            <h3>Tecnologías usadas</h3>
+            <div class="card-mm-icons">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript" />
+            </div>
+            <a href="https://master-mind-jdr.vercel.app/" target="_blank" rel="noopener noreferrer"
+              class="card-mm-link">
+              Link a la página
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card-mm-container">
+        <div class="card-mm">
+          <div class="card-mm-front">
+            <img src="https://i.postimg.cc/sxbdfSGH/Proyecto-Espacio.png" alt="MasterMind" />
+            </a>
+            <h3>Proyecto Espacio</h3>
+            <p>
+              Una página web moderna, responsive e interactiva que funciona como mini atlas del universo. Muestra
+              información clara y visual sobre el Sistema Solar, estrellas, galaxias y la historia del cosmos.
+            </p>
+          </div>
+          <div class="card-mm-back">
+            <h3>Tecnologías usadas</h3>
+            <div class="card-mm-icons">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript" />
+            </div>
+            <a href="https://proyecto-espacio.vercel.app/" target="_blank" rel="noopener noreferrer"
+              class="card-mm-link">
+              Link a la página
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card-mm-container">
+        <div class="card-mm">
+          <div class="card-mm-front">
+            <img src="https://i.ibb.co/TqDQPxLK/Bingo.png" alt="MasterMind" />
+            </a>
+            <h3>Bingo</h3>
+            <p>
+              Bingo es un juego de bingo moderno desarrollado para ofrecer experiencia visual atractiva,
+              rápida y responsiva,
+              incorporando mecánicas tanto para jugadores individuales como para partidas multijugador.
+            </p>
+          </div>
+          <div class="card-mm-back">
+            <h3>Tecnologías usadas</h3>
+            <div class="card-mm-icons">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+                </div>
+              <a href="https://bingonline.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-mm-link">
+                Link a la página
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+  </section>
+
+  <h2></h2>
+
+  <p class="frase-contacto animacion-giro-entrada">¡Trabajemos en un proyecto juntos!</p>
+
+  <form id="formulario-contacto" action="https://formsubmit.co/jorgediezrodriguez2004@gmail.com" method="POST">
+
+    <!-- Nombre -->
+    <label for="name">Nombre</label>
+    <input id="name" name="name" type="text" placeholder="Tu nombre" required />
+
+    <!-- Email -->
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
+
+    <!-- Mensaje -->
+    <label for="message">Tu mensaje</label>
+    <textarea id="message" name="message" placeholder="Cuéntame tu idea…" rows="5" required></textarea>
+
+    <!-- Botón -->
+    <button type="submit">Enviar</button>
+
+    <!-- ===== Opciones FormSubmit ===== -->
+    <!-- Redirección tras enviar -->
+    <input type="hidden" name="_next" value="https://jdiez93.github.io/gracias.html">
+
+    <!-- Asunto del email que recibirás -->
+    <input type="hidden" name="_subject" value="Nuevo mensaje desde el formulario de la web">
+
+    <!-- Plantilla de correo más legible -->
+    <input type="hidden" name="_template" value="table">
+
+    <!-- Respuesta automática al remitente -->
+    <input type="hidden" name="_autoresponse" value="¡Gracias por tu mensaje! Te responderé lo antes posible.">
+
+    <!-- Campo honeypot anti-spam (no borrar) -->
+    <input type="text" name="_honey" style="display:none">
+
+    <!-- Captcha (recomendado dejarlo activado). Pon 'false' si quieres desactivarlo -->
+    <input type="hidden" name="_captcha" value="false">
+  </form>
+
+
+
+
+
+
+
+  <footer class="footer">
+    <p>&copy; 2025 Jorge Diez Rodriguez. Todos los derechos reservados. Madrid</p>
+    <p>Contactame: +34 684313491 | jorgediezrodriguez2004@gmail.com |</p>
+    <div class="social-links">
+      <a href="https://github.com/Jdiez93" target="_blank" aria-label="GitHub">
+        <img src="https://cdn-icons-png.flaticon.com/24/733/733553.png" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/jorge-diez-rodriguez-4a7844293/" target="_blank" aria-label="LinkedIn">
+        <img src="https://cdn-icons-png.flaticon.com/24/174/174857.png" alt="LinkedIn">
+      </a>
+      <a href="mailto:jorgediezrodriguez2004@gmail.com" aria-label="Email">
+        <svg width="24" height="24" fill="#eee" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M2 4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4zm2 0v.511l8 5.333 8-5.333V4H4zm16 2.809-7.404 4.936a1 1 0 0 1-1.192 0L4 6.809V20h16v-13.191z" />
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,531 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  background: #0d0d0d;
+}
+
+canvas#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header, section, footer {
+  position: relative;
+  z-index: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00fff7;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  background: #00fff7;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card img {
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+input, textarea, button {
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background: #00fff7;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.experiencia {
+  padding: 4rem 2rem;
+  
+  color: #00ffe0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.experiencia p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color:rgb(255, 255, 255)
+}
+
+.timeline {
+  position: relative;
+  padding-left: 3rem; /* Más espacio para el icono */
+  border-left: 3px solid #00ffe0;
+}
+
+.timeline-item {
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -2.7rem; /* Ajuste para centrar mejor el icono */
+  top: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #00ffe0;
+  color: #0d0d0d;
+  border-radius: 50%;
+  font-size: 1.6rem; /* Icono más grande */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 8px rgba(0, 255, 224, 0.6); /* Resaltado */
+  z-index: 1; /* Asegura que quede por encima */
+}
+
+.timeline-content {
+  background: rgba(0, 255, 224, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  border: 1px solid #00ffe0;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.timeline-content .fecha {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+
+section h2 {
+  font-family: 'Orbitron', sans-serif; /* La fuente futurista que ya usas */
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #00fff7; /* Color azul neón que combina con el tema */
+  margin-left: 20px; /* Separación del borde izquierdo */
+  margin-bottom: 1rem;
+  border-left: 4px solid #00fff7; /* Una barra a la izquierda para destacar */
+  padding-left: 10px;
+}
+
+.categoria h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    color: #333;
+  }
+  50% {
+    transform: scale(1.05);
+    color: #00fff7; /* Cambia el color durante el pulso */
+  }
+}
+
+.card {
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 0.5s ease;
+}
+
+.card:hover {
+  animation: bounceScale 0.5s forwards;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes bounceScale {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.1) translateY(-15px);
+  }
+  70% {
+    transform: scale(1.05) translateY(-7px);
+  }
+  100% {
+    transform: scale(1.08) translateY(-10px);
+  }
+}
+
+.experiencia h2 {
+  text-align: left;          /* Alinea el texto a la izquierda */
+  margin-bottom: 30px;       /* Separación debajo del título */
+  padding-left: 10px;        /* Espacio extra hacia la izquierda */
+  /* Opcional: puedes añadir una transición o animación si quieres movimiento */
+}
+
+.typing {
+  width: fit-content;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black;
+  animation: typing 8s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+  font-family: monospace;
+  margin: 0 auto;          /* Para centrar bloque inline */
+  text-align: center;      /* Centrar el texto */
+  display: block;          /* Necesario para que margin auto funcione */
+}
+
+/* El color diferente para el span */
+.destacado {
+  color: #00fff7; /* naranja, pero puedes cambiarlo */
+}
+
+/* Animación de escritura */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Animación del cursor parpadeante */
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent }
+  50% { border-color: black }
+}
+
+#starfield {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background: transparent;
+}
+
+.hero-image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.hero-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #4caf50;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.card-mm-container {
+  perspective: 1200px;
+  width: 300px;
+  height: 400px;
+  margin: 20px;
+}
+
+.card-mm {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.card-mm-container:hover .card-mm {
+  transform: rotateY(180deg);
+}
+
+.card-mm-front,
+.card-mm-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: rgb(66, 65, 65);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.card-mm-front img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.card-mm-front h3 {
+  margin: 8px 0;
+  font-size: 20px;
+}
+
+.card-mm-front p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.card-mm-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.card-mm-back h3 {
+  margin-bottom: 16px;
+}
+
+.card-mm-icons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px; /* evita que crezca demasiado */
+}
+.card-mm-icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.card-mm-link {
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #0077cc;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.card-mm-link:hover {
+  background-color: #005fa3;
+}
+
+
+.frase-contacto {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #62a156;
+  text-align: center;
+  font-weight: 500;
+}
+
+.footer {
+    background-color: #000000;
+    color: #eee;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+  }
+  .social-links {
+    margin-top: 0.5rem;
+  }
+  .social-links a {
+    margin: 0 0.5rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  .social-links a:hover {
+    transform: scale(1.2);
+  }
+  .social-links img {
+    width: 24px;
+    height: 24px;
+  }
+
+ /* Ocultar el botón de menú en pantallas grandes */
+.menu-toggle {
+  display: none;
+  
+  
+}
+
+/* Mostrar el botón de menú solo en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff; /* o el color que uses en el navbar */
+  }
+
+  .nav-links {
+    display: none; /* ocultamos el menú inicialmente en móvil */
+    flex-direction: column;
+    background-color: #333; /* o el color de fondo que uses */
+    position: absolute;
+    top: 60px; /* ajusta según la altura de tu navbar */
+    right: 0;
+    width: 100%;
+  }
+
+  .nav-links.show {
+    display: flex; /* mostrar el menú cuando se activa el toggle */
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilo general para transición suave */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Tema claro (por defecto) */
+body.light {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+/* Tema oscuro */
+body.dark {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* Estilo del botón (puedes personalizarlo) */
+#toggle-theme {
+  position: fixed;
+  top: 5.5rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #eee;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+  
+}
+body.dark #toggle-theme {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+/* Estilo por defecto (modo claro) */
+#mensaje-importante {
+  color: #000000; /* texto oscuro para fondo claro */
+}
+
+/* Cuando está activado el modo oscuro */
+body.dark-theme #mensaje-importante {
+  color: #ffffff; /* texto blanco para fondo oscuro */
+}
+
+  button {
+    padding: 1rem 2rem;
+  background: #00fff7;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 20px 40px;
+  border-radius: 1px;
+  }
+
+
