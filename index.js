@@ -7,11 +7,13 @@
   if (year) year.textContent = String(new Date().getFullYear());
 
   function setMenu(open) {
-    if (!toggleBtn || !menu) return;
-    menu.classList.toggle("is-open", open);
-    toggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
-    toggleBtn.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
-  }
+  if (!toggleBtn || !menu) return;
+  menu.classList.toggle("is-open", open);
+  toggleBtn.classList.toggle("is-open", open); // ✅ AÑADE ESTA LÍNEA
+  toggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
+  toggleBtn.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+}
+
 
   if (toggleBtn && menu) {
     toggleBtn.addEventListener("click", () => {
