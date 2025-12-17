@@ -1,490 +1,358 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio JDR</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script defer src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <title>Portfolio | Jorge Díez Rodríguez</title>
+  <meta name="description" content="Portfolio de Tu Nombre - Desarrollador Web. Proyectos, experiencia, certificaciones y habilidades." />
+  <link rel="stylesheet" href="index.css" />
+
+  <!-- Iconos (Devicon). Si no carga, el diseño sigue funcionando. -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
 <body>
-  <canvas id="starfield"></canvas>
+  <a class="skip-link" href="#main">Saltar a contenido</a>
 
+  <header class="header" id="top">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a class="brand" href="#top" aria-label="Ir al inicio">
+        <span class="brand__mark">◼</span>
+        <span class="brand__text">Jorge Díez Rodríguez</span>
+      </a>
 
-  <header>
-    <nav class="navbar">
-      <div class="logo">🚀 Jorge Diez Rodriguez</div>
+      <button class="nav__toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
 
-
-      <div class="menu-toggle">&#9776;</div>
-      <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#experiencia">Experiencia</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+      <ul class="nav__menu" id="navMenu">
+        <li><a class="nav__link" href="#sobre-mi">Sobre mí</a></li>
+        <li><a class="nav__link" href="#habilidades">Habilidades</a></li>
+        <li><a class="nav__link" href="#certificaciones">Certificaciones</a></li>
+        <li><a class="nav__link" href="#experiencia">Experiencia</a></li>
+        <li><a class="nav__link nav__link--cta" href="#proyectos">Proyectos</a></li>
       </ul>
-
     </nav>
   </header>
 
-  <section id="inicio" class="hero ">
+  <main id="main">
+    <!-- HERO / SOBRE MI -->
+    <section class="section hero" id="sobre-mi">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow">Desarrollador Web</p>
+          <h1 class="hero__title">
+            Hola, soy <span class="accent">Jorge Díez Rodríguez</span>.
+          </h1>
+          <p class="hero__lead">
+            Construyo interfaces limpias y rápidas, con foco en accesibilidad, rendimiento y una experiencia sólida.
+            Me gusta entregar código mantenible, pensando en producto y en usuarios.
+          </p>
 
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1 class="typing">
-          Hola, soy
-          <span class="destacado">Desarrollador Web Full Stack</span>
-        </h1>
-        <p>
-          Soy un desarrollador Full Stack apasionado por la creación de
-          soluciones digitales integrales, con experiencia en el diseño,
-          desarrollo y despliegue de aplicaciones web modernas y funcionales.
-          Además complemento mi formación con un curso de ciberseguridad de Cisco Networking Academy.Y también un Master
-          de Inteligencia Artificial en Big School impartido por Jon Hernández y reconocido por la Universidad Isabel I.
+          <div class="hero__actions">
+            <a class="btn" href="#proyectos">Ver proyectos</a>
+            
+          </div>
+
+          <ul class="hero__meta" aria-label="Resumen rápido">
+            <li><span class="meta__label">Ubicación:</span> <span class="meta__value">Madrid, Spain</span></li>
+            <li><span class="meta__label">Disponibilidad:</span> <span class="meta__value">Remoto / Híbrido / Presencial</span></li>
+            <li><span class="meta__label">Stack:</span> <span class="meta__value">Frontend + Backend + Máster IA</span></li>
+          </ul>
+        </div>
+
+        <aside class="hero__card" aria-label="Tarjeta de perfil">
+          <div class="profile">
+            <div class="profile__avatar" aria-hidden="true">
+              <span>TN</span>
+            </div>
+
+            <div class="profile__info">
+              <p class="profile__name">Jorge Díez Rodríguez</p>
+              <p class="profile__role">Full-Stack Web Developer</p>
+            </div>
+
+            <div class="profile__chips" aria-label="Especialidades">
+              <span class="chip">UI limpia</span>
+              <span class="chip">APIs</span>
+              <span class="chip">Efectividad</span>
+              <span class="chip">Webs Responsivas</span>
+            </div>
+
+            <div class="profile__links" aria-label="Enlaces rápidos">
+              <a class="link" href="https://github.com/Jdiez93" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="link" href="https://www.linkedin.com/in/jorge-diez-rodriguez-4a7844293/" target="_blank" rel="noreferrer">LinkedIn</a>
+              
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section class="section" id="habilidades">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Habilidades</h2>
+          <p class="section__subtitle">
+            Tecnologías con las que trabajo. 
+          </p>
+        </header>
+
+        <div class="skills">
+          <article class="skills__group">
+            <h3 class="skills__title">Frontend</h3>
+            <ul class="icon-list">
+              <li class="icon-pill"><i class="devicon-html5-plain" aria-hidden="true"></i><span>HTML</span></li>
+              <li class="icon-pill"><i class="devicon-css3-plain" aria-hidden="true"></i><span>CSS</span></li>
+              <li class="icon-pill"><i class="devicon-javascript-plain" aria-hidden="true"></i><span>JavaScript</span></li>
+              <li class="icon-pill"><i class="devicon-react-original" aria-hidden="true"></i><span>React</span></li>
+              <li class="icon-pill"><i class="devicon-tailwindcss-original" aria-hidden="true"></i><span>Tailwind</span></li>
+            </ul>
+          </article>
+
+          <article class="skills__group">
+            <h3 class="skills__title">Backend</h3>
+            <ul class="icon-list">
+              <li class="icon-pill"><i class="devicon-nodejs-plain" aria-hidden="true"></i><span>Node.js</span></li>
+              <li class="icon-pill"><i class="devicon-express-original" aria-hidden="true"></i><span>Express</span></li>
+              <li class="icon-pill"><i class="devicon-python-plain" aria-hidden="true"></i><span>Python</span></li>
+              <li class="icon-pill"><i class="devicon-django-plain" aria-hidden="true"></i><span>Django</span></li>
+            </ul>
+          </article>
+
+          <article class="skills__group">
+            <h3 class="skills__title">Base de datos</h3>
+            <ul class="icon-list">
+              <li class="icon-pill"><i class="devicon-postgresql-plain" aria-hidden="true"></i><span>PostgreSQL</span></li>
+              <li class="icon-pill"><i class="devicon-mysql-plain" aria-hidden="true"></i><span>MySQL</span></li>
+              <li class="icon-pill"><i class="devicon-mongodb-plain" aria-hidden="true"></i><span>MongoDB</span></li>
+              <li class="icon-pill"><i class="devicon-redis-plain" aria-hidden="true"></i><span>Redis</span></li>
+            </ul>
+          </article>
+
+          <article class="skills__group">
+            <h3 class="skills__title">Otras herramientas</h3>
+            <ul class="icon-list">
+              <li class="icon-pill"><i class="devicon-git-plain" aria-hidden="true"></i><span>Git</span></li>
+              <li class="icon-pill"><i class="devicon-github-original" aria-hidden="true"></i><span>GitHub</span></li>
+              <li class="icon-pill"><i class="devicon-docker-plain" aria-hidden="true"></i><span>Docker</span></li>
+              <li class="icon-pill"><i class="devicon-linux-plain" aria-hidden="true"></i><span>Linux</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICACIONES -->
+    <section class="section" id="certificaciones">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Certificaciones</h2>
+          <p class="section__subtitle">Otras certificaciones añadidas a mi perfil.</p>
+        </header>
+
+        <div class="timeline">
+          <article class="timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <h3 class="timeline__title">Curso ciberseguridad </h3>
+              <p class="timeline__meta">CISCO Networking Academy · 2025</p>
+              <p class="timeline__desc">Curso de iniciación a la ciberseguridad en Cisco Networking Academy, centrado en los fundamentos de seguridad digital, amenazas comunes, protección de datos y buenas prácticas en entornos tecnológicos.</p>
+            </div>
+          </article>
+
+          <article class="timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <h3 class="timeline__title">Máster en Inteligencia Artificial</h3>
+              <p class="timeline__meta">Universidad Big School · 2025-2026</p>
+              <p class="timeline__desc">Máster en Inteligencia Artificial enfocado en el diseño, desarrollo y aplicación de modelos avanzados de aprendizaje automático y análisis de datos, abordando técnicas de machine learning, deep learning y su implementación en soluciones reales para la optimización de procesos y la toma de decisiones.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section class="section" id="experiencia">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Experiencia</h2>
+          <p class="section__subtitle">Enfocada en impacto: métricas, resultados y responsabilidades.</p>
+        </header>
+
+        <div class="experience">
+          <article class="experience__item">
+            <div class="experience__header">
+              <h3 class="experience__role">Desarrollador Web</h3>
+              <p class="experience__place">Empresa / Cliente · 2025 — Actualidad</p>
+            </div>
+            <ul class="bullets">
+              <li>Construcción de UI responsive y accesible, cuidando performance y consistencia visual.</li>
+              <li>Integración con APIs y manejo de estados, validaciones y errores de forma robusta.</li>
+              <li>Mejoras medibles: optimización de carga, reducción de incidencias, etc. (añade tus datos).</li>
+            </ul>
+          </article>
+
+          <article class="experience__item">
+            <div class="experience__header">
+              <h3 class="experience__role">Proyecto Freelance / Prácticas</h3>
+              <p class="experience__place">Cliente / Centro · 2024</p>
+            </div>
+            <ul class="bullets">
+              <li>Desarrollo de funcionalidades end-to-end y despliegue en entorno real.</li>
+              <li>Documentación y handoff para mantenimiento futuro.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="section" id="proyectos">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Proyectos destacados</h2>
+          <p class="section__subtitle">
+            Pocos, pero buenos. Al pasar el ratón verás el stack y un botón al sitio.
+          </p>
+        </header>
+
+        <div class="projects">
+          <!-- CARD 1 -->
+          <article class="flip-card" aria-label="Proyecto: Dashboard de Ventas">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <div class="project">
+                  <h3 class="project__title">Dashboard de Ventas</h3>
+                  <p class="project__desc">
+                    Panel con filtros y métricas. Enfoque en UX y velocidad de carga.
+                  </p>
+                  <ul class="project__highlights">
+                    <li>Filtros + paginación</li>
+                    <li>Estados y errores claros</li>
+                    <li>Responsive real</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="flip-card__back">
+                <div class="project project--back">
+                  <h4 class="project__stack-title">Tecnologías</h4>
+                  <ul class="tech-icons" aria-label="Tecnologías usadas">
+                    <li title="React"><i class="devicon-react-original"></i><span>React</span></li>
+                    <li title="Node.js"><i class="devicon-nodejs-plain"></i><span>Node</span></li>
+                    <li title="PostgreSQL"><i class="devicon-postgresql-plain"></i><span>Postgres</span></li>
+                  </ul>
+                  <a class="btn btn--small" href="https://example.com" target="_blank" rel="noreferrer">
+                    Ver proyecto
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2 -->
+          <article class="flip-card" aria-label="Proyecto: E-commerce minimal">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <div class="project">
+                  <h3 class="project__title">E-commerce minimal</h3>
+                  <p class="project__desc">
+                    Catálogo con carrito, persistencia y checkout simulado.
+                  </p>
+                  <ul class="project__highlights">
+                    <li>Carrito persistente</li>
+                    <li>Búsqueda y ordenación</li>
+                    <li>Componentes reutilizables</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="flip-card__back">
+                <div class="project project--back">
+                  <h4 class="project__stack-title">Tecnologías</h4>
+                  <ul class="tech-icons" aria-label="Tecnologías usadas">
+                    <li title="JavaScript"><i class="devicon-javascript-plain"></i><span>JS</span></li>
+                    <li title="CSS"><i class="devicon-css3-plain"></i><span>CSS</span></li>
+                    <li title="Firebase"><i class="devicon-firebase-plain"></i><span>Firebase</span></li>
+                  </ul>
+                  <a class="btn btn--small" href="https://example.com" target="_blank" rel="noreferrer">
+                    Ver proyecto
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="flip-card" aria-label="Proyecto: API + Panel Admin">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <div class="project">
+                  <h3 class="project__title">API + Panel Admin</h3>
+                  <p class="project__desc">
+                    CRUD completo con autenticación, roles y logs.
+                  </p>
+                  <ul class="project__highlights">
+                    <li>Auth + permisos</li>
+                    <li>Validaciones</li>
+                    <li>Deploy</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="flip-card__back">
+                <div class="project project--back">
+                  <h4 class="project__stack-title">Tecnologías</h4>
+                  <ul class="tech-icons" aria-label="Tecnologías usadas">
+                    <li title="Python"><i class="devicon-python-plain"></i><span>Python</span></li>
+                    <li title="Django"><i class="devicon-django-plain"></i><span>Django</span></li>
+                    <li title="Docker"><i class="devicon-docker-plain"></i><span>Docker</span></li>
+                  </ul>
+                  <a class="btn btn--small" href="https://example.com" target="_blank" rel="noreferrer">
+                    Ver proyecto
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container footer__grid">
+      <div>
+        <p class="footer__brand">Jorge Díez Rodríguez</p>
+        <p class="footer__text">
+          Disponible para nuevas oportunidades y colaboraciones.
+          Si crees que mi perfil puede encajar en tu proyecto o equipo, estaré encantado de escucharte. No dudes en ponerte en contacto conmigo para comentar ideas, propuestas o posibles colaboraciones.
         </p>
-        <a href="#proyectos" class="btn">Ver Proyectos</a>
-        <button onclick="descargarPDF()">Descargar CV</button>
       </div>
-    </div>
-  </section>
 
-  <section id="habilidades" class="habilidades reveal">
-    <h2>Habilidades</h2>
-
-    <div class="categoria">
-      <h3>Frontend</h3>
-      <div class="grid">
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
-            width="50" />
-          <p>HTML5</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" width="50" />
-          <p>CSS3</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-            alt="JavaScript" width="50" />
-          <p>JavaScript</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
-            width="50" />
-          <p>React</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular"
-            width="50" />
-          <p>Angular</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg" alt="Astro"
-            width="50" />
-          <p>Astro</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"
-            width="50" />
-          <p>Bootstrap</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass/SCSS"
-            width="50" />
-          <p>SCSS</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js"
-            width="50" />
-          <p>Next.js</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-            alt="TypeScript" width="50" />
-          <p>TypeScript</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js"
-            width="50" />
-          <p>Vue.js</p>
-        </div>
+      <div class="footer__contacts" aria-label="Contacto">
+        <h3 class="footer__title">Contacto</h3>
+        <ul class="footer__list">
+          <li><span class="footer__label">Email:</span> <a href="mailto:tuemail@correo.com">tuemail@correo.com</a></li>
+          <li><span class="footer__label">Móvil:</span> <a href="tel:+34000000000">+34 000 000 000</a></li>
+          <li><span class="footer__label">LinkedIn:</span> <a href="https://www.linkedin.com/in/jorge-diez-rodriguez-4a7844293/" target="_blank" rel="noreferrer">Jorge Díez</a></li>
+          <li><span class="footer__label">GitHub:</span> <a href="https://github.com/Jdiez93" target="_blank" rel="noreferrer">Jdiez93</a></li>
+        </ul>
       </div>
-    </div>
 
-    <div class="categoria">
-      <h3>Backend</h3>
-      <div class="grid">
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
-            width="50" />
-          <p>Node.js</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
-            width="50" />
-          <p>Python</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="50" />
-          <p>Java</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" width="50" />
-          <p>PHP</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"
-            width="50" />
-          <p>Docker</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#"
-            width="50" />
-          <p>C#</p>
-        </div>
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> Jorge Díez Rodríguez. Todos los derechos reservados.</p>
+        <a class="to-top" href="#sobre-mi">Volver arriba ↑</a>
       </div>
-    </div>
-
-    <div class="categoria">
-      <h3>Base de Datos</h3>
-      <div class="grid">
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"
-            width="50" />
-          <p>MongoDB</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
-            width="50" />
-          <p>MySQL</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg" alt="MariaDB"
-            width="50" />
-          <p>MariaDB</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite"
-            width="50" />
-          <p>SQLite</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-            alt="PostgreSQL" width="50" />
-          <p>PostgreSQL</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase"
-            width="50" />
-          <p>Firebase</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle"
-            width="50" />
-          <p>Oracle</p>
-        </div>
-      </div>
-    </div>
-    <div class="categoria">
-      <h3>Herramientas y Control de Versiones</h3>
-      <div class="grid">
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="50" />
-          <p>Git</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
-            width="50" />
-          <p>GitHub</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab"
-            width="50" />
-          <p>GitLab</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman"
-            width="50" />
-          <p>Postman</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" alt="Trello"
-            width="50" />
-          <p>Trello</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-plain.svg" alt="Trello"
-            width="50" />
-          <p>Figma</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="categoria">
-      <h3>Otras Formaciones</h3>
-      <div class="categoria">
-
-        <div class="categoria">
-
-          <div class="grid">
-
-            <div class="card">
-              <img src="https://cdn-icons-png.flaticon.com/512/2889/2889676.png" alt="Ciberseguridad" width="50" />
-              <p>Curso de Ciberseguridad</p>
-              <span class="subtexto"> <strong>Cisco Networking Academy</strong></span>
-            </div>
-
-            <div class="card">
-              <img src="https://cdn-icons-png.flaticon.com/512/4712/4712107.png" alt="Inteligencia Artificial"
-                width="50" />
-              <p>Máster en Inteligencia Artificial</p>
-              <span class="subtexto"> <strong>Big School</strong></span>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experiencia" class="experiencia reveal">
-    <h2>Experiencia</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-icon">💼</div>
-        <div class="timeline-content">
-          <h3>Desarrollador Web Junior - Integrasys S.A</h3>
-          <span class="fecha">Septiembre 2023 - Diciembre 2024</span>
-          <p id="mensaje-importante">
-            Participé en el desarrollo completo de aplicaciones web,
-            trabajando tanto en el frontend como en el backend. En el
-            frontend, utilicé tecnologías como HTML5, CSS3, JavaScript y
-            frameworks como React, enfocándome en crear interfaces
-            responsivas, accesibles y con una experiencia de usuario fluida.
-            En el backend, implementé lógica de negocio, autenticación de
-            usuarios y conexiones con bases de datos utilizando Node.js,
-            Express y MySQL. Desarrollé APIs REST para facilitar la
-            comunicación entre el cliente y el servidor.Utilicé Git para el
-            control de versiones
-          </p>
-        </div>
-      </div>
-    </div>
-
-    
-  </section>
-
-  <section id="proyectos" class="proyectos reveal">
-  <h2>Proyectos Destacados</h2>
-
-  <div class="grid">
-    <!-- MasterMind -->
-    <div class="card-mm-container">
-      <div class="card-mm">
-        <div class="card-mm-front">
-          <img src="https://i.postimg.cc/8Cb3c8kH/Mastermind.png" alt="MasterMind" />
-          <h3>MasterMind</h3>
-          <p>
-            MasterMind es un juego web donde el objetivo es adivinar un patrón
-            secreto de colores. Tienes 5 intentos para acertarlo y los colores
-            pueden repetirse en la combinación.
-          </p>
-        </div>
-        <div class="card-mm-back">
-          <h3>Tecnologías usadas</h3>
-          <div class="card-mm-icons">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
-          </div>
-          <a href="https://master-mind-jdr.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-mm-link">
-            Link a la página
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Proyecto Espacio -->
-    <div class="card-mm-container">
-      <div class="card-mm">
-        <div class="card-mm-front">
-          <img src="https://i.postimg.cc/sxbdfSGH/Proyecto-Espacio.png" alt="Proyecto Espacio" />
-          <h3>Proyecto Espacio</h3>
-          <p>
-            Una página web moderna, responsive e interactiva que funciona como mini atlas del universo.
-            Muestra información clara y visual sobre el Sistema Solar, estrellas, galaxias y la historia del cosmos.
-          </p>
-        </div>
-        <div class="card-mm-back">
-          <h3>Tecnologías usadas</h3>
-          <div class="card-mm-icons">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
-          </div>
-          <a href="https://proyecto-espacio.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-mm-link">
-            Link a la página
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bingo -->
-    <div class="card-mm-container">
-      <div class="card-mm">
-        <div class="card-mm-front">
-          <img src="https://i.postimg.cc/BvG9tcTJ/Bingo.png" alt="Bingo" />
-          <h3>Bingo</h3>
-          <p>
-            Bingo es un juego de bingo moderno desarrollado para ofrecer experiencia visual atractiva,
-            rápida y responsiva, incorporando mecánicas tanto para jugadores individuales como para partidas multijugador.
-          </p>
-        </div>
-        <div class="card-mm-back">
-          <h3>Tecnologías usadas</h3>
-          <div class="card-mm-icons">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
-          </div>
-          <a href="https://bingonline.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-mm-link">
-            Link a la página
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- FisioMarcosGarcía -->
-    <div class="card-mm-container">
-      <div class="card-mm">
-        <div class="card-mm-front">
-          <img src="https://i.postimg.cc/HkNvwPfg/Fisio-Garcy.png" alt="FisioMarcosGarcía" />
-          <h3>FisioMarcosGarcía</h3>
-          <p>
-            Página web para una clínica de fisioterapia, para un amigo para darse a conocer y captar clientes.
-            Con varias páginas y secciones. Adaptada a cualquier dispositivo. No esta del todo acabad aseguire trabajando y mejorando esta página
-          </p>
-        </div>
-        <div class="card-mm-back">
-          <h3>Tecnologías usadas</h3>
-          <div class="card-mm-icons">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg" alt="Astro" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
-          </div>
-          <a href="https://fisiomarcosgarcia.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-mm-link">
-            Link a la página
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- FisioMarcosGarcía -->
-    <div class="card-mm-container">
-      <div class="card-mm">
-        <div class="card-mm-front">
-          <img src="https://i.postimg.cc/nhRHRRQt/DZW-Agency.png" alt="FisioMarcosGarcía" />
-          <h3>DZW Agency</h3>
-          <p>
-            Agencia dedicada al desarrollo de webs para empresas y particulares. Realizamos todo tipo de Webs. Desde páginas sencillas hasta tiendas online completas.
-            Tambien ofrecemos servicios posicionamiento SEO. La página recibirá actualizaciones en un futuro, con ejemplos de páginas creadas a distintos clientes
-          
-          </p>
-        </div>
-        <div class="card-mm-back">
-          <h3>Tecnologías usadas</h3>
-          <div class="card-mm-icons">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg" alt="Astro" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
-          </div>
-          <a href="https://dzw-agency.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-mm-link">
-            Link a la página
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <h2></h2>
-
-  <p class="frase-contacto animacion-giro-entrada">¡Trabajemos en un proyecto juntos!</p>
-
-  <form id="formulario-contacto" action="https://formsubmit.co/jorgediezrodriguez2004@gmail.com" method="POST">
-
-    <!-- Nombre -->
-    <label for="name">Nombre</label>
-    <input id="name" name="name" type="text" placeholder="Tu nombre" required />
-
-    <!-- Email -->
-    <label for="email">Email</label>
-    <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
-
-    <!-- Mensaje -->
-    <label for="message">Tu mensaje</label>
-    <textarea id="message" name="message" placeholder="Cuéntame tu idea…" rows="5" required></textarea>
-
-    <!-- Botón -->
-    <button type="submit">Enviar</button>
-
-    <!-- ===== Opciones FormSubmit ===== -->
-    <!-- Redirección tras enviar -->
-    <input type="hidden" name="_next" value="https://https://jdr93portfolio.vercel.app/gracias.html">
-
-    <!-- Asunto del email que recibirás -->
-    <input type="hidden" name="_subject" value="Nuevo mensaje desde el formulario de la web">
-
-    <!-- Plantilla de correo más legible -->
-    <input type="hidden" name="_template" value="table">
-
-    <!-- Respuesta automática al remitente -->
-    <input type="hidden" name="_autoresponse" value="¡Gracias por tu mensaje! Te responderé lo antes posible.">
-
-    <!-- Campo honeypot anti-spam (no borrar) -->
-    <input type="text" name="_honey" style="display:none">
-
-    <!-- Captcha (recomendado dejarlo activado). Pon 'false' si quieres desactivarlo -->
-    <input type="hidden" name="_captcha" value="false">
-  </form>
-
-
-
-
-
-
-
-  <footer class="footer">
-    <p>&copy; 2025 Jorge Diez Rodriguez. Todos los derechos reservados. Madrid</p>
-    <p>Contactame: +34 684313491 | jorgediezrodriguez2004@gmail.com |</p>
-    <div class="social-links">
-      <a href="https://github.com/Jdiez93" target="_blank" aria-label="GitHub">
-        <img src="https://cdn-icons-png.flaticon.com/24/733/733553.png" alt="GitHub">
-      </a>
-      <a href="https://www.linkedin.com/in/jorge-diez-rodriguez-4a7844293/" target="_blank" aria-label="LinkedIn">
-        <img src="https://cdn-icons-png.flaticon.com/24/174/174857.png" alt="LinkedIn">
-      </a>
-      <a href="mailto:jorgediezrodriguez2004@gmail.com" aria-label="Email">
-        <svg width="24" height="24" fill="#eee" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path
-            d="M2 4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4zm2 0v.511l8 5.333 8-5.333V4H4zm16 2.809-7.404 4.936a1 1 0 0 1-1.192 0L4 6.809V20h16v-13.191z" />
-        </svg>
-      </a>
     </div>
   </footer>
 
-
+  <script src="index.js"></script>
 </body>
-
 </html>
