@@ -108,5 +108,40 @@ if ("IntersectionObserver" in window && titles.length) {
   titles.forEach((t) => t.classList.add("is-revealed"));
 }
 
+// Contadores en el aside (una sola vez)
+const counters = document.querySelectorAll("[data-counter]");
+const statsBox = document.querySelector(".stats");
+
+function animateCounters() {
+  counters.forEach((el) => {
+    const target = Number(el.getAttribute("data-counter")) || 0;
+    const duration = 900;
+    const start = performance.now();
+
+    const tick = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const value = Math.round(target * progress);
+      el.textContent = String(value);
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+
+    requestAnimationFrame(tick);
+  });
+}
+
+if (statsBox && "IntersectionObserver" in window) {
+  const obs = new IntersectionObserver((entries, observer) => {
+    if (entries.some((e) => e.isIntersecting)) {
+      animateCounters();
+      observer.disconnect();
+    }
+  }, { threshold: 0.35 });
+
+  obs.observe(statsBox);
+} else {
+  animateCounters();
+}
+
+
 })();
 
