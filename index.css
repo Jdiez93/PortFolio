@@ -821,3 +821,53 @@ img{ max-width: 100%; height: auto; display:block; }
 .icon-pill:hover i{
   animation: icon-pop .22s ease-out;
 }
+
+
+/* ====== Hero aside: panel de cifras ====== */
+.profile__kicker{
+  margin: 0;
+  color: var(--muted);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: .78rem;
+}
+
+.profile__headline{
+  margin: .55rem 0 0;
+  color: rgba(231,238,248,.92);
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.stats{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .7rem;
+  margin-top: 1.05rem;
+}
+
+.stat{
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.02);
+  padding: .8rem .75rem;
+}
+
+.stat__value{
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+
+.stat__label{
+  margin: .25rem 0 0;
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+/* En móvil, que no quede apretado */
+@media (max-width: 420px){
+  .stats{ grid-template-columns: 1fr; }
+}
