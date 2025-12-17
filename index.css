@@ -656,3 +656,98 @@ img{ max-width: 100%; height: auto; display:block; }
   border-radius: 8px; /* opcional, si tu logo no es circular */
 }
 
+/* Glow azul en proyectos al hover */
+.flip-card__front,
+.flip-card__back{
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+
+.flip-card:hover .flip-card__front,
+.flip-card:hover .flip-card__back{
+  border-color: rgba(125,211,252,.55);
+  box-shadow:
+    0 0 0 1px rgba(125,211,252,.25),
+    0 10px 30px rgba(0,0,0,.25),
+    0 0 24px rgba(125,211,252,.16);
+}
+
+
+.project__image{
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: .6rem 0 .8rem;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+}
+
+
+/* ====== Títulos de sección con animación azul ====== */
+.section__title{
+  position: relative;
+  display: inline-block;
+  padding-bottom: .25rem;
+}
+
+/* Subrayado animado */
+.section__title::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(125,211,252,.95), rgba(125,211,252,.15));
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
+}
+
+/* Brillo suave (muy sutil) */
+.section__title::before{
+  content: "";
+  position: absolute;
+  left: -6px;
+  right: -6px;
+  bottom: -8px;
+  height: 14px;
+  border-radius: 999px;
+  background: rgba(125,211,252,.18);
+  filter: blur(10px);
+  opacity: 0;
+}
+
+/* Cuando se activa (por JS con clase) */
+.section__title.is-revealed{
+  color: rgba(231,238,248,.98);
+}
+
+.section__title.is-revealed::after{
+  animation: title-underline .7s ease forwards;
+}
+
+.section__title.is-revealed::before{
+  animation: title-glow .7s ease .15s ease forwards;
+}
+
+@keyframes title-underline{
+  from{ transform: scaleX(0); opacity: 0; }
+  to{ transform: scaleX(1); opacity: 1; }
+}
+
+@keyframes title-glow{
+  from{ opacity: 0; }
+  to{ opacity: 1; }
+}
+
+/* Accesibilidad: respeta reduce motion */
+@media (prefers-reduced-motion: reduce){
+  .section__title::after,
+  .section__title::before{
+    transform: none;
+    opacity: 1;
+    animation: none !important;
+  }
+}

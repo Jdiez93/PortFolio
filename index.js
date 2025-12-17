@@ -85,4 +85,28 @@
 
     sections.forEach((s) => observer.observe(s));
   }
+
+  // Animación títulos al entrar en viewport
+const titles = document.querySelectorAll(".section__title");
+
+if ("IntersectionObserver" in window && titles.length) {
+  const titleObserver = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-revealed");
+          obs.unobserve(entry.target); // solo una vez
+        }
+      });
+    },
+    { threshold: 0.35 }
+  );
+
+  titles.forEach((t) => titleObserver.observe(t));
+} else {
+  // Fallback: si no hay IO, mostramos todo
+  titles.forEach((t) => t.classList.add("is-revealed"));
+}
+
 })();
+
