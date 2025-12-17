@@ -142,6 +142,44 @@ if (statsBox && "IntersectionObserver" in window) {
   animateCounters();
 }
 
+// ====== Scroll Reveal (entra desde laterales, al bajar y al subir) ======
+const revealTargets = [
+  ".section__header",
+  ".skills__group",
+  ".timeline__item",
+  ".experience__item",
+  ".flip-card",
+  ".hero__content",
+  ".hero__card",
+].flatMap((sel) => Array.from(document.querySelectorAll(sel)));
+
+revealTargets.forEach((el, idx) => {
+  el.classList.add("reveal");
+  el.classList.add(idx % 2 === 0 ? "reveal--left" : "reveal--right");
+
+  // Stagger suave (solo para que no aparezca todo a la vez)
+  const delay = Math.min(idx * 90, 360);
+  el.style.setProperty("--delay", `${delay}ms`);
+  el.setAttribute("data-delay", "1");
+});
+
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        // Entra => visible / Sale => se quita (para que al volver se reanime)
+        entry.target.classList.toggle("is-visible", entry.isIntersecting);
+      });
+    },
+    { threshold: 0.18, rootMargin: "0px 0px -10% 0px" }
+  );
+
+  revealTargets.forEach((el) => io.observe(el));
+} else {
+  // Fallback
+  revealTargets.forEach((el) => el.classList.add("is-visible"));
+}
+
 
 })();
 

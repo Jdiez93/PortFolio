@@ -871,3 +871,38 @@ img{ max-width: 100%; height: auto; display:block; }
 @media (max-width: 420px){
   .stats{ grid-template-columns: 1fr; }
 }
+
+
+/* ====== Scroll reveal (entra desde laterales) ====== */
+.reveal{
+  opacity: 0;
+  transform: translateX(var(--reveal-x, 0)) translateY(10px);
+  transition:
+    opacity .85s cubic-bezier(.22,.61,.36,1),
+    transform .85s cubic-bezier(.22,.61,.36,1);
+  will-change: transform, opacity;
+}
+
+
+.reveal.is-visible{
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+/* Direcciones */
+.reveal--left{ --reveal-x: -28px; }
+.reveal--right{ --reveal-x: 28px; }
+
+/* Pequeño stagger cuando hay data-delay */
+.reveal[data-delay]{
+  transition-delay: var(--delay, 0ms);
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce){
+  .reveal{
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
