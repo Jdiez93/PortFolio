@@ -151,6 +151,7 @@ const revealTargets = [
   ".flip-card",
   ".hero__content",
   ".hero__card",
+  ".ai-card"
 ].flatMap((sel) => Array.from(document.querySelectorAll(sel)));
 
 revealTargets.forEach((el, idx) => {
