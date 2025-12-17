@@ -751,3 +751,73 @@ img{ max-width: 100%; height: auto; display:block; }
     animation: none !important;
   }
 }
+
+
+/* ====== Títulos de grupos de habilidades ====== */
+.skills__title{
+  position: relative;
+  display: inline-block;
+  margin-bottom: .9rem;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+/* Subrayado sutil en azul */
+.skills__title::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(125,211,252,.9),
+    rgba(125,211,252,.25)
+  );
+}
+
+
+/* ====== Animación iconos habilidades ====== */
+.icon-pill{
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    border-color .18s ease;
+}
+
+.icon-pill i{
+  transition:
+    transform .18s ease,
+    color .18s ease;
+}
+
+/* Hover / focus */
+.icon-pill:hover,
+.icon-pill:focus-within{
+  border-color: rgba(125,211,252,.55);
+  box-shadow:
+    0 0 0 1px rgba(125,211,252,.25),
+    0 6px 18px rgba(0,0,0,.25),
+    0 0 16px rgba(125,211,252,.15);
+  transform: translateY(-2px);
+}
+
+/* Icono reacciona ligeramente */
+.icon-pill:hover i,
+.icon-pill:focus-within i{
+  transform: scale(1.12);
+  color: var(--accent);
+}
+
+@keyframes icon-pop{
+  0%{ transform: scale(1); }
+  60%{ transform: scale(1.18); }
+  100%{ transform: scale(1.12); }
+}
+
+.icon-pill:hover i{
+  animation: icon-pop .22s ease-out;
+}
