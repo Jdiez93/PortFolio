@@ -906,3 +906,23 @@ img{ max-width: 100%; height: auto; display:block; }
     transition: none !important;
   }
 }
+
+/* Botón descargar CV */
+.btn--cv{
+  margin-left: .4rem;
+  background: linear-gradient(
+    135deg,
+    rgba(125,211,252,.35),
+    rgba(125,211,252,.12)
+  );
+  border-color: rgba(125,211,252,.55);
+  color: rgba(231,238,248,.98);
+  font-weight: 700;
+}
+
+.btn--cv:hover{
+  box-shadow:
+    0 0 0 1px rgba(125,211,252,.35),
+    0 10px 30px rgba(0,0,0,.35),
+    0 0 22px rgba(125,211,252,.35);
+}
