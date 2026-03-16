@@ -986,3 +986,10 @@ img{ max-width: 100%; height: auto; display:block; }
 @media (max-width: 980px){
   .ai-grid{ grid-template-columns: 1fr; }
 }
+
+.stat__desc {
+  font-size: 0.8rem;
+  opacity: 0.65;
+  margin-top: 0.25rem;
+  letter-spacing: 0.02em;
+}
