@@ -993,3 +993,17 @@ img{ max-width: 100%; height: auto; display:block; }
   margin-top: 0.25rem;
   letter-spacing: 0.02em;
 }
+
+.project__actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.btn--outline {
+  background: transparent;
+  border: 1px solid currentColor;
+}
+
