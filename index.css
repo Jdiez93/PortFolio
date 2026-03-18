@@ -1037,3 +1037,72 @@ img{ max-width: 100%; height: auto; display:block; }
   text-decoration: none !important;
   border-bottom: none !important;
 }
+
+.cert-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .85rem;
+    background: linear-gradient(135deg, #1a1a20 0%, #141418 100%);
+    border: 1px solid #2e2e38;
+    border-radius: 12px;
+    padding: .7rem 1rem .7rem .8rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .25s, box-shadow .25s, transform .2s;
+    max-width: 380px;
+  }
+ 
+  .cert-badge:hover {
+    border-color: rgba(125,211,252,.55);
+    box-shadow: 0 0 0 1px #c8a96e33, 0 8px 24px rgba(0,0,0,.4);
+    transform: translateY(-2px);
+  }
+ 
+  .cert-badge__thumb {
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: #222;
+  }
+ 
+  .cert-badge__body {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    min-width: 0;
+  }
+ 
+  .cert-badge__eyebrow {
+    font-size: .65rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #c8a96e;
+  }
+ 
+  .cert-badge__name {
+    font-size: .88rem;
+    font-weight: 500;
+    color: #f0ece4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+ 
+  .cert-badge__issuer {
+    font-size: .75rem;
+    color: #666;
+  }
+ 
+  .cert-badge__arrow {
+    margin-left: auto;
+    flex-shrink: 0;
+    color: #444;
+    transition: color .2s, transform .2s;
+  }
+ 
+  .cert-badge:hover .cert-badge__arrow {
+    color: rgba(125,211,252,.55);
+    transform: translateX(3px);
+  }
