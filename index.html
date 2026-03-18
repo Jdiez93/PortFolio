@@ -8,7 +8,7 @@
   <meta name="description"
     content="Portfolio de Tu Nombre - Desarrollador Web. Proyectos, experiencia, certificaciones y habilidades." />
   <link rel="stylesheet" href="index.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="logoJDR.png">
   <link rel="icon" type="image/png" sizes="16x16" href="logoJDR.png">
@@ -108,11 +108,16 @@
             </div>
 
             <div class="profile__links" aria-label="Enlaces rápidos">
-              <a class="link" href="https://github.com/Jdiez93" target="_blank" rel="noreferrer">GitHub</a>
-              <a class="link" href="https://www.linkedin.com/in/jorge-diez-rodriguez-4a7844293/" target="_blank"
-                rel="noreferrer">
-                LinkedIn
-              </a>
+              <div class="social-links">
+                <a class="link social-icon" href="https://github.com/Jdiez93" target="_blank" rel="noreferrer"
+                  aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a class="link social-icon" href="https://www.linkedin.com/in/jorge-diez-rodriguez-4a7844293/"
+                  target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
               <a class="btn btn--small btn--cv" href="CVjorgeDiezRodriguez.pdf" download>
                 Descargar CV 📝
               </a>
@@ -483,7 +488,8 @@
         <header class="section__header">
           <h2 class="section__title">Proyectos destacados</h2>
           <p class="section__subtitle">
-            Proyectos que he realizado con distintas tecnologías. Al pasar el ratón verás el stack y un enlace al sitio web y repositorio de GitHub.
+            Proyectos que he realizado con distintas tecnologías. Al pasar el ratón verás el stack y un enlace al sitio
+            web y repositorio de GitHub.
           </p>
         </header>
 
@@ -578,8 +584,7 @@
                   </ul>
 
                   <div class="project__actions">
-                    <a class="btn btn--small" href="https://aurabarber.vercel.app/" target="_blank"
-                      rel="noreferrer">
+                    <a class="btn btn--small" href="https://aurabarber.vercel.app/" target="_blank" rel="noreferrer">
                       Ver proyecto
                     </a>
                     <a class="btn btn--small btn--outline" href="https://github.com/Jdiez93/chic-cuts-scheduler"

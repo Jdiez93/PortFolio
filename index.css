@@ -1007,3 +1007,33 @@ img{ max-width: 100%; height: auto; display:block; }
   border: 1px solid currentColor;
 }
 
+.link {
+  text-decoration: none; /* Quita la línea debajo */
+  color: inherit;        /* Mantiene el color del texto del padre */
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.2s ease;
+}
+
+.social-icon i {
+  font-size: 2rem;    /* Ajusta el tamaño del icono */
+}
+
+.link:hover {
+  transform: scale(1.1); /* Efecto visual al pasar el ratón */
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none !important; /* Fuerza la eliminación de la línea */
+  border-bottom: none !important;   /* Por si es un borde en lugar de subrayado */
+  display: inline-flex;             /* Alinea mejor el icono */
+  align-items: center;
+  outline: none;
+}
+
+/* Elimina el subrayado también en estados activos o visitados */
+.link:hover, .link:active, .link:focus {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
