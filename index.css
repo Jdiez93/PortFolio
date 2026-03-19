@@ -1320,3 +1320,12 @@ img{ max-width: 100%; height: auto; display:block; }
   transform: scale(1.1);
   transition: all 0.3s ease;
 }
+
+.project__alert {
+  color: #ef4444; /* Rojo semántico moderno (estilo Tailwind) */
+  font-size: 0.85em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  margin-left: 4px;
+}
