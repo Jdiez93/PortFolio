@@ -1106,3 +1106,217 @@ img{ max-width: 100%; height: auto; display:block; }
     color: rgba(125,211,252,.55);
     transform: translateX(3px);
   }
+
+  :root {
+  --bg-dark: #0b0f14;
+  --text-main: #a1a1aa;
+  --text-bright: #ffffff;
+  --accent: #6366f1; /* Indigo moderno */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+}
+
+.footer {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  padding: 100px 0 40px;
+  border-top: 1px solid var(--border-subtle);
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.footer__main-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 0.8fr 0.8fr;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.footer__logo {
+  color: var(--text-bright);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.footer__bio {
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+/* Indicador de Disponibilidad */
+.footer__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(99, 102, 241, 0.1);
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #22c55e;
+  animation: pulse 2s infinite;
+}
+
+.status-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  text-transform: uppercase;
+}
+
+.footer__label {
+  color: var(--text-bright);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+
+.footer__highlight {
+  display: block;
+  color: var(--text-bright);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.footer__subtext {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  color: var(--text-main);
+}
+
+.footer__item { margin-bottom: 1.5rem; }
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__link {
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.footer__link:hover {
+  color: var(--accent);
+  transform: translateX(5px);
+}
+
+/* Social Boxes */
+.footer__socials-grid {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.social-box {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  color: var(--text-bright);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-box:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+}
+
+.footer__phone {
+  display: block;
+  color: var(--text-bright);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Bottom Bar */
+.footer__legal {
+  padding-top: 30px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.footer__legal-left {
+  display: flex;
+  gap: 24px;
+}
+
+.footer__back-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-bright);
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer__main-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+@media (max-width: 640px) {
+  .footer__main-grid { grid-template-columns: 1fr; }
+  .footer__legal { flex-direction: column-reverse; gap: 20px; text-align: center; }
+}
+
+.footer__location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-main);
+  font-size: 0.85rem;
+}
+
+.flag-wrapper {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%; /* La hace circular para un look más moderno */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.flag-icon {
+  width: 150%; /* Ajuste para que cubra el círculo */
+  height: auto;
+  object-fit: cover;
+}
+
+/* Efecto hover sutil */
+.footer__location:hover .flag-wrapper {
+  border-color: var(--accent);
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}

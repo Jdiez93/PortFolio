@@ -181,6 +181,6 @@ if ("IntersectionObserver" in window) {
   revealTargets.forEach((el) => el.classList.add("is-visible"));
 }
 
-
+document.getElementById('year').textContent = new Date().getFullYear();
 })();
 
