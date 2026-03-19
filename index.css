@@ -1288,44 +1288,89 @@ img{ max-width: 100%; height: auto; display:block; }
   .footer__legal { flex-direction: column-reverse; gap: 20px; text-align: center; }
 }
 
-.footer__location {
+
+
+
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Contenedor de contacto */
+.footer__contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__link {
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: var(--text-main);
+  text-decoration: none;
+  color: #e2e8f0; /* Color gris claro/blanco */
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: fit-content;
+}
+
+/* Efecto Hover */
+.footer__link:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: #3b82f6;
+  color: #3b82f6;
+  transform: translateX(8px); /* Desplazamiento sutil */
+}
+
+/* Iconos */
+.footer__link svg {
+  margin-right: 12px;
+  transition: transform 0.3s ease;
+}
+
+.footer__link:hover svg {
+  transform: scale(1.1);
+}
+
+.footer__legal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
   font-size: 0.85rem;
 }
 
-.flag-wrapper {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%; /* La hace circular para un look más moderno */
-  overflow: hidden;
+.footer__legal-left {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  gap: 20px; /* Espacio entre el copyright y la ubicación */
+}
+
+.footer__location {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espacio entre bandera y texto */
+}
+
+.flag-wrapper {
+  display: flex;
+  align-items: center;
+  width: 20px; /* Ancho controlado */
+  height: auto;
 }
 
 .flag-icon {
-  width: 150%; /* Ajuste para que cubra el círculo */
+  width: 100%;
   height: auto;
-  object-fit: cover;
-}
-
-/* Efecto hover sutil */
-.footer__location:hover .flag-wrapper {
-  border-color: var(--accent);
-  transform: scale(1.1);
-  transition: all 0.3s ease;
-}
-
-.project__alert {
-  color: #ef4444; /* Rojo semántico moderno (estilo Tailwind) */
-  font-size: 0.85em;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
-  margin-left: 4px;
+  border-radius: 2px; /* Bordes ligeramente redondeados para estilo moderno */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: block;
 }
