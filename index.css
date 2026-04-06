@@ -1374,3 +1374,17 @@ img{ max-width: 100%; height: auto; display:block; }
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   display: block;
 }
+
+.timeline__place {
+  color: #00d4ff; /* Azul brillante */
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.6), 
+               0 0 15px rgba(0, 212, 255, 0.4);
+  transition: text-shadow 0.3s ease;
+}
+
+/* Opcional: aumenta el brillo al pasar el ratón */
+.timeline__place:hover {
+  text-shadow: 0 0 12px rgba(0, 212, 255, 0.8), 
+               0 0 20px rgba(0, 212, 255, 0.6);
+}
