@@ -1,3 +1,68 @@
+/* ===== AJUSTES DEL EFECTO ===== */
+
+/* Para fondo oscuro con partículas claras */
+:root {
+  --network-dot-rgb: 255, 255, 255;
+  --network-line-rgb: 255, 255, 255;
+}
+
+/* Si lo quieres como la imagen, sobre fondo claro, cambia a esto:
+:root {
+  --network-dot-rgb: 90, 90, 90;
+  --network-line-rgb: 120, 120, 120;
+}
+*/
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* El canvas cubre toda la web */
+#network-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 1;
+}
+
+/* Todo el contenido por encima */
+.page-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Opcional: un velo muy sutil para que no se vea demasiado agresivo */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.03), transparent 28%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.02), transparent 26%),
+    radial-gradient(circle at 50% 80%, rgba(255,255,255,0.02), transparent 30%);
+}
+
+/* Menos carga visual en móvil */
+@media (max-width: 768px) {
+  #network-bg {
+    opacity: 0.45;
+  }
+}
+
+
+
+
 /* ====== Base ====== */
 :root{
   --bg: #0b0f14;
