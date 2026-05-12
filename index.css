@@ -1537,3 +1537,26 @@ img{ max-width: 100%; height: auto; display:block; }
   text-shadow: 0 0 12px rgba(0, 212, 255, 0.8), 
                0 0 20px rgba(0, 212, 255, 0.6);
 }
+
+.hero__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* ajusta a tu gusto */
+}
+
+.hero__meta li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meta__label {
+  color: #5b7cf6;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meta__label i {
+  color: #5b7cf6;
+}

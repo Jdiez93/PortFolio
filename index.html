@@ -38,17 +38,17 @@
 
 <body>
 
-  
+
   <!-- =========================
        ACCESIBILIDAD
        Enlace para saltar al contenido principal
   ========================== -->
   <a class="skip-link" href="#main">Saltar a contenido</a>
-<canvas id="network-bg" aria-hidden="true"></canvas>
+  <canvas id="network-bg" aria-hidden="true"></canvas>
 
-<div class="page-content">
-  <!-- toda tu web aquí -->
-</div>
+  <div class="page-content">
+    <!-- toda tu web aquí -->
+  </div>
   <!-- =========================
        HEADER / NAVEGACIÓN
   ========================== -->
@@ -106,18 +106,19 @@
           </div>
 
           <!-- Resumen rápido -->
+          <!-- Resumen rápido -->
           <ul class="hero__meta" aria-label="Resumen rápido">
             <li>
-              <span class="meta__label">Ubicación:</span>
-              <span class="meta__value">Madrid, Spain</span>
+              <span class="meta__label"><i class="fas fa-map-marker-alt"></i> Ubicación:</span>
+              <span class="meta__value">Villanueva del Pardillo (Madrid), España</span>
             </li>
             <li>
-              <span class="meta__label">Disponibilidad:</span>
+              <span class="meta__label"><i class="fas fa-briefcase"></i> Disponibilidad:</span>
               <span class="meta__value">Remoto / Híbrido / Presencial</span>
             </li>
             <li>
-              <span class="meta__label">Stack:</span>
-              <span class="meta__value">Frontend + Backend + Máster IA</span>
+              <span class="meta__label"><i class="fas fa-layer-group"></i> Stack:</span>
+              <span class="meta__value">Frontend + Backend + Máster IA + Ciberseguridad</span>
             </li>
           </ul>
         </div>
@@ -164,6 +165,11 @@
                 <a class="link social-icon" href="https://www.linkedin.com/in/jorge-diez-rodriguez-4a7844293/"
                   target="_blank" rel="noreferrer" aria-label="LinkedIn">
                   <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a class="link social-icon" href="https://discord.gg/Qz2ckjARV" target="_blank" rel="noreferrer"
+                  aria-label="Discord">
+                  <i class="fab fa-discord"></i>
                 </a>
               </div>
 
@@ -407,70 +413,75 @@
     <!-- ==================================================
      IA APLICADA A DESARROLLO Y PRODUCTO
 =================================================== -->
-<section class="section" id="ia-aplicada">
-  <div class="container">
-    <header class="section__header">
-      <h2 class="section__title">IA aplicada a desarrollo y producto</h2>
-      <p class="section__subtitle">
-        Formación orientada a casos de uso reales en producto digital: asistentes, automatización de procesos e integración de IA en aplicaciones.
-      </p>
-    </header>
+    <section class="section" id="ia-aplicada">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">IA aplicada a desarrollo y producto</h2>
+          <p class="section__subtitle">
+            Formación orientada a casos de uso reales en producto digital: asistentes, automatización de procesos e
+            integración de IA en aplicaciones.
+          </p>
+        </header>
 
-    <div class="ai-grid">
-      <article class="ai-card">
-        <h3 class="ai-card__title">Asistentes e integración en producto</h3>
-        <p class="ai-card__desc">
-          Aplicación de modelos de lenguaje para mejorar experiencias de usuario, acelerar soporte funcional, generar contenido útil y asistir en flujos dentro de aplicaciones web.
-        </p>
-        <ul class="ai-tags" aria-label="Tecnologías y áreas">
-          <li class="ai-tag">LLMs</li>
-          <li class="ai-tag">Prompting</li>
-          <li class="ai-tag">UX asistida</li>
-          <li class="ai-tag">Productividad</li>
-        </ul>
-      </article>
+        <div class="ai-grid">
+          <article class="ai-card">
+            <h3 class="ai-card__title">Asistentes e integración en producto</h3>
+            <p class="ai-card__desc">
+              Aplicación de modelos de lenguaje para mejorar experiencias de usuario, acelerar soporte funcional,
+              generar contenido útil y asistir en flujos dentro de aplicaciones web.
+            </p>
+            <ul class="ai-tags" aria-label="Tecnologías y áreas">
+              <li class="ai-tag">LLMs</li>
+              <li class="ai-tag">Prompting</li>
+              <li class="ai-tag">UX asistida</li>
+              <li class="ai-tag">Productividad</li>
+            </ul>
+          </article>
 
-      <article class="ai-card">
-        <h3 class="ai-card__title">Automatización de procesos</h3>
-        <p class="ai-card__desc">
-          Diseño de flujos automatizados con lógica, triggers, conectores e intercambio de datos entre servicios para reducir tareas repetitivas y mejorar la eficiencia operativa.
-        </p>
-        <ul class="ai-tags" aria-label="Herramientas">
-          <li class="ai-tag">n8n</li>
-          <li class="ai-tag">Make</li>
-          <li class="ai-tag">Workflows</li>
-          <li class="ai-tag">Integraciones</li>
-        </ul>
-      </article>
+          <article class="ai-card">
+            <h3 class="ai-card__title">Automatización de procesos</h3>
+            <p class="ai-card__desc">
+              Diseño de flujos automatizados con lógica, triggers, conectores e intercambio de datos entre servicios
+              para reducir tareas repetitivas y mejorar la eficiencia operativa.
+            </p>
+            <ul class="ai-tags" aria-label="Herramientas">
+              <li class="ai-tag">n8n</li>
+              <li class="ai-tag">Make</li>
+              <li class="ai-tag">Workflows</li>
+              <li class="ai-tag">Integraciones</li>
+            </ul>
+          </article>
 
-      <article class="ai-card">
-        <h3 class="ai-card__title">IA aplicada al desarrollo</h3>
-        <p class="ai-card__desc">
-          Uso de IA como apoyo al ciclo de desarrollo: análisis de requisitos, documentación técnica, refactorización, generación asistida de código y validación de soluciones con criterio técnico.
-        </p>
-        <ul class="ai-tags" aria-label="Áreas">
-          <li class="ai-tag">Documentación</li>
-          <li class="ai-tag">Refactorización</li>
-          <li class="ai-tag">Análisis técnico</li>
-          <li class="ai-tag">Testing asistido</li>
-        </ul>
-      </article>
+          <article class="ai-card">
+            <h3 class="ai-card__title">IA aplicada al desarrollo</h3>
+            <p class="ai-card__desc">
+              Uso de IA como apoyo al ciclo de desarrollo: análisis de requisitos, documentación técnica,
+              refactorización, generación asistida de código y validación de soluciones con criterio técnico.
+            </p>
+            <ul class="ai-tags" aria-label="Áreas">
+              <li class="ai-tag">Documentación</li>
+              <li class="ai-tag">Refactorización</li>
+              <li class="ai-tag">Análisis técnico</li>
+              <li class="ai-tag">Testing asistido</li>
+            </ul>
+          </article>
 
-      <article class="ai-card">
-        <h3 class="ai-card__title">Prototipado y validación de ideas</h3>
-        <p class="ai-card__desc">
-          Creación rápida de prototipos funcionales para validar interfaces, flujos y propuestas de producto antes de pasar a desarrollo más robusto y escalable.
-        </p>
-        <ul class="ai-tags" aria-label="Áreas">
-          <li class="ai-tag">Prototipado</li>
-          <li class="ai-tag">Validación</li>
-          <li class="ai-tag">Iteración</li>
-          <li class="ai-tag">MVP</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
+          <article class="ai-card">
+            <h3 class="ai-card__title">Prototipado y validación de ideas</h3>
+            <p class="ai-card__desc">
+              Creación rápida de prototipos funcionales para validar interfaces, flujos y propuestas de producto antes
+              de pasar a desarrollo más robusto y escalable.
+            </p>
+            <ul class="ai-tags" aria-label="Áreas">
+              <li class="ai-tag">Prototipado</li>
+              <li class="ai-tag">Validación</li>
+              <li class="ai-tag">Iteración</li>
+              <li class="ai-tag">MVP</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <!-- ==================================================
          EXPERIENCIA
@@ -585,32 +596,33 @@
                   <h4 class="project__stack-title">Tecnologías</h4>
 
                   <ul class="tech-icons" aria-label="Technologies used">
-  <li title="TypeScript">
-    <i class="devicon-typescript-plain"></i>
-    <span>TypeScript</span>
-  </li>
-  <li title="CSS">
-    <i class="devicon-css3-plain"></i>
-    <span>CSS</span>
-  </li>
-  <li title="PL/SQL">
-    <i class="devicon-oracle-original"></i>
-    <span>PL/SQL</span>
-  </li>
-</ul>
+                    <li title="TypeScript">
+                      <i class="devicon-typescript-plain"></i>
+                      <span>TypeScript</span>
+                    </li>
+                    <li title="CSS">
+                      <i class="devicon-css3-plain"></i>
+                      <span>CSS</span>
+                    </li>
+                    <li title="PL/SQL">
+                      <i class="devicon-oracle-original"></i>
+                      <span>PL/SQL</span>
+                    </li>
+                  </ul>
 
                   <div class="project__actions">
-                    <a class="btn btn--small" href="https://vitaflow-health.vercel.app/" target="_blank" rel="noreferrer">
+                    <a class="btn btn--small" href="https://vitaflow-health.vercel.app/" target="_blank"
+                      rel="noreferrer">
                       Ver proyecto
                     </a>
-                    <a class="btn btn--small btn--outline" href="https://github.com/Jdiez93/VitaflowHealth" target="_blank"
-                      rel="noreferrer">
+                    <a class="btn btn--small btn--outline" href="https://github.com/Jdiez93/VitaflowHealth"
+                      target="_blank" rel="noreferrer">
                       <i class="devicon-github-original"></i> GitHub
                     </a>
                   </div>
                 </div>
           </article>
-          
+
           <!-- Proyecto 1 -->
           <article class="flip-card" aria-label="Proyecto: Dashboard de Ventas">
             <div class="flip-card__inner">
@@ -1033,6 +1045,10 @@
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
               </svg>
             </a>
+            <a class="link social-icon" href="https://discord.gg/Qz2ckjARV" target="_blank" rel="noreferrer"
+                  aria-label="Discord">
+                  <i class="fab fa-discord"></i>
+                </a>
           </div>
 
           <div class="footer__contact-info">
